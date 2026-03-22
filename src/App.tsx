@@ -1,10 +1,10 @@
 import Acceso from "./components/Acceso";
 import Menu from "./components/Menu";
 import { Routes, Route } from "react-router-dom";
-import Contenido from "./ui/pages/Contenido";
-import Aspirantes from "./components/contenido/Aspirantes";
-import Preventa from "./components/contenido/Preventa";
-import Profesiones from "./components/contenido/Profesiones";
+import Contenido from "./ui/Contenido";
+import Aspirantes from "./ui/pages/Aspirantes";
+import Preventa from "./ui/pages/Preventa";
+import Profesiones from "./ui/pages/Profesiones";
 
 function App() {
 
