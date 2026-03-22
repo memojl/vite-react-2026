@@ -4,11 +4,11 @@ import Profesiones from "../../components/contenido/Profesiones";
 
 function Contenido() {
   return (
-    <main className="content-wrap">
+    <>
       <Preventa />
       <Aspirantes />
       <Profesiones />
-    </main>
+    </>
   );
 }
 
