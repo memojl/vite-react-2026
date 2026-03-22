@@ -1,12 +1,48 @@
 import Acceso from "./components/Acceso";
 import Menu from "./components/Menu";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Contenido from "./ui/pages/Contenido";
 import Aspirantes from "./components/contenido/Aspirantes";
 import Preventa from "./components/contenido/Preventa";
 import Profesiones from "./components/contenido/Profesiones";
 
 function App() {
+
+  const profesiones = [
+    {
+      id: 1,
+      nombre: "Abogado"
+    },
+    {
+      id: 2,
+      nombre: "Arquitecto"
+    },
+    {
+      id: 3,
+      nombre: "Botánico"
+    },
+    {
+      id: 4,
+      nombre: "Computista"
+    },
+    {
+      id: 5,
+      nombre: "Economista"
+    },
+    {
+      id: 6,
+      nombre: "Técnico de sonido"
+    },
+    {
+      id: 7,
+      nombre: "Profesor"
+    },
+    {
+      id: 8,
+      nombre: "Linguista"
+    },
+  ];
+
   return (
     <div className="dashboard">
       <Acceso />
@@ -17,7 +53,7 @@ function App() {
           <Route path="/" element={<Contenido />} />
           <Route path="/empresa" element={<Preventa />} />
           <Route path="/aspirantes" element={<Aspirantes />} />
-          <Route path="/profesiones" element={<Profesiones />} />
+          <Route path="/profesiones" element={<Profesiones listado={profesiones} />} />
         </Routes>
       </main>
     </div>

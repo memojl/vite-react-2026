@@ -1,4 +1,14 @@
-function Profesiones() {
+
+type Props = {
+  listado: {
+    id: number;
+    nombre: string;
+  }[];
+};
+
+function Profesiones({listado}: Props) {
+
+  console.log(listado);
   return (
     <section className="content">
       <h2 className="mt-3">Profesiones</h2>
@@ -9,54 +19,20 @@ function Profesiones() {
         >
           Listado de Profesiones
         </h4>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Abogado
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Arquitecto
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Botánico
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Computista
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Economista
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Técnico de sonido
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Profesor
-        </button>
-        <button
-          type="button"
-          className="list-group-item list-group-item-action text-center"
-        >
-          Linguista
-        </button>
+        {
+          
+          listado.map((x)=>(
+            <button
+              type="button"
+              className="list-group-item list-group-item-action text-center"
+              key={x.id}
+            >
+              {x.nombre}
+            </button>
+          ))
+          
+        }
+        
       </div>
     </section>
   );

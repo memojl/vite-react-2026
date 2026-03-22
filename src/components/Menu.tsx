@@ -1,5 +1,5 @@
 import Logo from "../assets/img/logo.png";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Menu() {
   const style: any = {
