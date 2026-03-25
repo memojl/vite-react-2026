@@ -1,9 +1,16 @@
-import React from 'react'
+import { useLoaderData } from "react-router-dom";
+import Card from "../../components/Card.tsx";
 
-function aspirantes() {
+function Aspirantes() {
+  const aspirantes = useLoaderData() ?? [];
   return (
-    <div>aspirantes</div>
-  )
+    <section className="content">
+      <h2>Aspirantes</h2>
+      <article className="person-boxes">
+        <Card listado={aspirantes} />
+      </article>
+    </section>
+  );
 }
 
-export default aspirantes
+export default Aspirantes;
