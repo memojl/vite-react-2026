@@ -1,4 +1,4 @@
-import { fetchAspirantes } from "../services/AspirantesService";
+import { fetchAspirantes } from "../../services/AspirantesService";
 
 export const aspirantesLoader = async () => {
     const aspirantes = await fetchAspirantes();

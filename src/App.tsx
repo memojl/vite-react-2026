@@ -1,5 +1,4 @@
 import {
-    Link,
     createBrowserRouter,
     RouterProvider,
     Outlet
@@ -7,12 +6,12 @@ import {
 import Acceso from "./components/Acceso";
 import Menu from "./components/Menu";
 //import { Routes, Route } from "react-router-dom";
-import Contenido from "./ui/Contenido";
+import Home from "./ui/pages/Home";
 import Aspirantes from "./ui/pages/Aspirantes";
 import Preventa from "./ui/pages/Preventa";
 import Profesiones from "./ui/pages/Profesiones";
 import { profesiones } from './utils/conts';
-import { aspirantesLoader } from './hooks/useAspirantesLoader';
+import { aspirantesLoader } from './utils/hooks/useAspirantesLoader';
 
 function Layout() {
   return (
@@ -36,7 +35,7 @@ function App() {
             children : [
                 {
                     index: true,
-                    element: <Contenido/>
+                    element: <Home />
                 },
                 {
                     path: 'empresa',
