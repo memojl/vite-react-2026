@@ -1,14 +1,6 @@
-type Props = {
-  listado: {
-    id: string;
-    nombre: string;
-    apellido: string;
-    foto: string;
-    email: string;
-  }[];
-};
+import type { CardProps } from "../utils/interfaces";
 
-function Card({ listado }: Props) {
+function Card({ listado }: CardProps) {
   console.log(listado);
 
   return (
