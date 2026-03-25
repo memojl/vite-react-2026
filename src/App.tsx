@@ -1,8 +1,4 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-    Outlet
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Acceso from "./components/Acceso";
 import Menu from "./components/Menu";
 //import { Routes, Route } from "react-router-dom";
@@ -13,48 +9,46 @@ import Profesiones from "./ui/pages/Profesiones";
 import { profesiones } from './utils/conts';
 import { aspirantesLoader } from './utils/hooks/useAspirantesLoader';
 
-function Layout() {
-  return (
-    <div className="dashboard">
-      <Acceso />
-      <Menu />
-      <main className="content-wrap">
-        <Outlet />
-      </main>
-    </div>
-  )
+function Template() {
+    return (
+        <div className="dashboard">
+            <Acceso />
+            <Menu />
+            <main className="content-wrap">
+                <Outlet />
+            </main>
+        </div>
+    )
 }
 
 function App() {
-
-
-  const router = createBrowserRouter([
+    const router = createBrowserRouter([
         {
             path: '/',
-            element : <Layout/>,
-            children : [
+            element: <Template />,
+            children: [
                 {
                     index: true,
                     element: <Home />
                 },
                 {
                     path: 'empresa',
-                    element: <Preventa/>
+                    element: <Preventa />
                 },
                 {
                     path: 'aspirantes',
-                    element: <Aspirantes/>,
+                    element: <Aspirantes />,
                     loader: aspirantesLoader
                 },
                 {
                     path: 'profesiones',
-                    element: <Profesiones listado={profesiones}/>
+                    element: <Profesiones listado={profesiones} />
                 }
             ]
 
         }
     ])
-    return <RouterProvider router={router}/>;
+    return <RouterProvider router={router} />;
 }
 
 export default App;
