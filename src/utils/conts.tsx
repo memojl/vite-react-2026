@@ -1,1 +1,0 @@
-export const urlApi = 'https://randomuser.me/api/'
