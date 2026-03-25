@@ -1,4 +1,4 @@
-import type { CardProps } from "../utils/interfaces";
+import type { CardProps } from "../utils/models/interfaces";
 
 function Card({ listado }: CardProps) {
   console.log(listado);
