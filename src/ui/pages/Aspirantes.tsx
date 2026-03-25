@@ -7,7 +7,11 @@ function Aspirantes() {
     <section className="content">
       <h2>Aspirantes</h2>
       <article className="person-boxes">
-        <Card listado={aspirantes} />
+        {
+          (aspirantes.length > 0) ?
+            <Card listado={aspirantes} /> :
+            <div>Hubo un error</div>
+        }
       </article>
     </section>
   );
