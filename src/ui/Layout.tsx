@@ -1,6 +1,5 @@
 import Acceso from "../components/Acceso";
 import Menu from "../components/Menu";
-//import Rutas from "../Rutas";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Home from "./pages/Home";
 import Aspirantes from "./pages/Aspirantes";
