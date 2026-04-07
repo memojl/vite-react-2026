@@ -1,54 +1,9 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Acceso from "./components/Acceso";
-import Menu from "./components/Menu";
-//import { Routes, Route } from "react-router-dom";
-import Home from "./ui/pages/Home";
-import Aspirantes from "./ui/pages/Aspirantes";
-import Preventa from "./ui/pages/Preventa";
-import Profesiones from "./ui/pages/Profesiones";
-import { profesiones } from './utils/conts';
-import { aspirantesLoader } from './utils/hooks/useAspirantesLoader';
-
-function Template() {
-    return (
-        <div className="dashboard">
-            <Acceso />
-            <Menu />
-            <main className="content-wrap">
-                <Outlet />
-            </main>
-        </div>
-    )
-}
+import Layout from './ui/Layout';
 
 function App() {
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <Template />,
-            children: [
-                {
-                    index: true,
-                    element: <Home />
-                },
-                {
-                    path: 'empresa',
-                    element: <Preventa />
-                },
-                {
-                    path: 'aspirantes',
-                    element: <Aspirantes />,
-                    loader: aspirantesLoader
-                },
-                {
-                    path: 'profesiones',
-                    element: <Profesiones listado={profesiones} />
-                }
-            ]
-
-        }
-    ])
-    return <RouterProvider router={router} />;
+  return (
+    <Layout />
+  )
 }
 
-export default App;
+export default App
