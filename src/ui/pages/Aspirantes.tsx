@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Card from "../../components/Card.tsx";
 
 function Aspirantes() {
-  const aspirantes: any = useLoaderData() ?? [];
+  const aspirantes: any[] = useLoaderData() ?? [];
   return (
     <section className="content">
       <h2>Aspirantes</h2>
